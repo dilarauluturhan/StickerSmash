@@ -28,16 +28,16 @@ Daha sonra yine terminalde aşağıdaki komutu çalıştırıp projeyi ayağa ka
 npx expo start
 ```
 
-Son hali aşağıdaki gibi olmalıdır:
+Uygulamanın bu aşamadaki durumu şağıdaki gibi olmalıdır:
 
-![1](https://github.com/user-attachments/assets/96999238-1482-4404-8c05-28bdbd6c53e2)
+![01-app-running-on-all-platforms](https://github.com/user-attachments/assets/e6b4f003-470d-4140-97cc-0d26a6baa505)
 
 ### Ekran Oluşturma
 
 Bu aşamada StickerSmash'in ilk ekranını yapıyoruz. Ekranda bir görsel alanı ve iki buton var. İlk buton cihazdan görsel seçmeyi sağlayacak. İkinci buton seçilen görselle uygulamaya devam etmeyi sağlayacak. Kullanıcı bir görsel seçtikten sonra bir çıkartma seçip görsele ekleyebilecek.
 Kod yazmaya başlamadan önce ekranı parçalara ayıralım. Bu parçaları React Native'in sağladığı [Temel Component'ler](https://reactnative.dev/docs/components-and-apis) ile kodlayacağız.
 
-![2](https://github.com/user-attachments/assets/9f4b2127-3326-437c-b936-ac02fd6106b5)
+![2-breakdown-of-layout](https://github.com/user-attachments/assets/09ec83a1-e5b9-4862-9dc7-d9ed1b9b1082)
 
 Üç temel unsur var:
 
@@ -52,9 +52,9 @@ Görüntüyü uygulamada görüntülemek için React Native'in `Image` component
 
 React Native, native platformlarda ekrana dokunma olayını yönetmek için çeşitli component'ler sağlıyor. Bu projede `Pressable` kullanılmış. Pressable; dokunma, basma, basılı tutma gibi olaylara tepki vermek üzere tasarlanmıştır. Uygulamada kullanacağımız iki buton var ve ikisinin birbirinden farklı stilleri var. Bu yüzden yeniden kullanacağımız buton component'ini yazıyoruz.
 
-Son hali aşağıdaki gibi olmalıdır:
+Uygulamanın bu aşamadaki durumu şağıdaki gibi olmalıdır:
 
-3. görsel
+![3-initial-layout](https://github.com/user-attachments/assets/a8f689d2-84f6-46c3-a95c-49d3ff99ca52)
 
 ### Resim Seçici Kullanma
 
@@ -89,6 +89,8 @@ Bu bölümde, üçüncü taraf bir kitaplık kullanarak ekran görüntüsünün 
 
 Galeriye erişim gibi hassas bilgilere erişim gerektiren bir uygulama oluştururken öncelikle kullanıcının iznini istememiz gerekir. expo-media-library, izin durumunu veren bir `usePermissions()` hook'u ve izin verilmediğinde galeriye erişim istemek için bir `requestPermission()` metodu sağlar.
 
+![4-permission](https://github.com/user-attachments/assets/cbf642ac-7640-4b1b-9207-9ac5b145d604)
+
 ### Platform Farklılıklarını Yönetme
 
 Android, iOS ve Web'in farklı yetenekleri vardır. Bizim durumumuzda hem Android hem de iOS react-native-view-shot kitaplığıyla ekran görüntüsü yakalayabilir ancak web tarayıcıları bunu yapamaz. Bu bölümde, web tarayıcılarının tüm platformlarda aynı işlevselliği elde edebilmesi için nasıl istisna oluşturulacağını öğreneceğiz.
@@ -100,28 +102,28 @@ Web'de bir ekran görüntüsü yakalamak ve bunu resim olarak kaydetmek için [d
 Uygulamanın tamamen başlatılabilir olduğunu düşünmeden önce durum çubuğunu yapılandırmamız, bir açılış ekranı eklememiz ve bir uygulama simgesi eklememiz gerekiyor.
 [](https://docs.expo.dev/tutorial/configuration/)
 
-## Tebrikler! Aynı kod tabanından Android, iOS ve web üzerinde çalışan bir uygulama geliştirdik.
+# Tebrikler! Aynı kod tabanında Android, iOS ve Web üzerinde çalışan bir uygulama geliştirdik.
 
-## Getting Started
-To get the project up and running on your local machine, follow these steps:
+### Proje Kurulumu
+Projeyi local'de çalışır duruma getirmek için şu adımları izleyin:
 
-Clone the repository:
+Projeyi klonlayın:
 ````
-git clone https://github.com/dilarauluturhan/mobile-login-signup-screens.git
+git clone https://github.com/dilarauluturhan/StickerSmash.git
 ````
-Go to the project directory:
+Projeye gidin:
 ````
-cd mobile-login-signup-screens
+cd StickerSmash
 ````
-Install the required dependencies:
+Bağımlılıkları yükleyin:
 ````
 npm install
 ````
-Start the application:
+Uygulamayı başlatın:
 ````
 npx expo start
 ````
-Go to `http://localhost:8081` in your Expo app.
+`http://localhost:8081` portunda uygulamanız başlayacaktır.
 
-## Contact With
+### İletişim
 Dilara Uluturhan - [LinkedIn](https://www.linkedin.com/in/dilarauluturhan/) - dilarauluturhan@outlook.com
